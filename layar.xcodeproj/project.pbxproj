@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2BCA6E1BD01FB157303055A5 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 14CD1AEB1888D196C07BD3D7 /* Settings.bundle */; };
+		6EE430471B54701500770B17 /* LayarSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE430451B54701500770B17 /* LayarSDK.framework */; };
+		6EE430481B54701500770B17 /* Libraries in Resources */ = {isa = PBXBuildFile; fileRef = 6EE430461B54701500770B17 /* Libraries */; };
+		6EE4304A1B54703000770B17 /* ARLayarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE430491B54703000770B17 /* ARLayarViewController.swift */; };
 		759AE100708A3E876FA96DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208E6748C26EB37B7D30BB71 /* AppDelegate.swift */; };
 		820244EBF21FF0A3851BB91A /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = A308D71745F0888635B75D19 /* LaunchScreen.xib */; };
 		8427E2643446E854FF21596B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB1EB3A711DBF555F65B64E /* Images.xcassets */; };
@@ -35,6 +38,10 @@
 		2BB1EB3A711DBF555F65B64E /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5E526296E9EAAB504B7A3D9A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B73DD3EEFEB366CC333C9F9 /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EE430451B54701500770B17 /* LayarSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LayarSDK.framework; sourceTree = "<group>"; };
+		6EE430461B54701500770B17 /* Libraries */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Libraries; sourceTree = "<group>"; };
+		6EE430491B54703000770B17 /* ARLayarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARLayarViewController.swift; sourceTree = "<group>"; };
+		6EE4304C1B5470FD00770B17 /* BridgeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
 		736DAA9B85ECF72203327047 /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		759032C97830338884E470B2 /* Pods-unit_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.release.xcconfig"; sourceTree = "<group>"; };
 		A308D71745F0888635B75D19 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -48,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D528AC0E48B098AAEBBD28 /* Foundation.framework in Frameworks */,
+				6EE430471B54701500770B17 /* LayarSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				208E6748C26EB37B7D30BB71 /* AppDelegate.swift */,
+				6EE430491B54703000770B17 /* ARLayarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -130,6 +139,8 @@
 		53895E10C05C499A453963B0 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				6EE430451B54701500770B17 /* LayarSDK.framework */,
+				6EE430461B54701500770B17 /* Libraries */,
 				1CA91B6348988DE0C5C8E3EF /* Foundation.framework */,
 			);
 			name = iOS;
@@ -148,6 +159,7 @@
 		62CA9DFD476820A1D4C23C48 /* layar */ = {
 			isa = PBXGroup;
 			children = (
+				6EE4304B1B5470CD00770B17 /* Headers */,
 				C2469805AD63CB29AF5617E0 /* Extensions */,
 				3D836C3242D337378E784AA5 /* Protocols */,
 				667A5A9DEDF84DF8C84C623A /* Models */,
@@ -164,6 +176,14 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6EE4304B1B5470CD00770B17 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				6EE4304C1B5470FD00770B17 /* BridgeHeader.h */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 		796F51710B9E7ED456D9CB3D /* ViewModels */ = {
@@ -318,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EE430481B54701500770B17 /* Libraries in Resources */,
 				8427E2643446E854FF21596B /* Images.xcassets in Resources */,
 				2BCA6E1BD01FB157303055A5 /* Settings.bundle in Resources */,
 			);
@@ -392,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				759AE100708A3E876FA96DA5 /* AppDelegate.swift in Sources */,
+				6EE4304A1B54703000770B17 /* ARLayarViewController.swift in Sources */,
 				AC71F6AD1C19A425150B60CC /* Main.storyboard in Sources */,
 				820244EBF21FF0A3851BB91A /* LaunchScreen.xib in Sources */,
 			);
@@ -440,6 +462,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "layar/Resources/Other-Sources/Info.plist";
@@ -453,9 +479,14 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"$(inherited)",
 				);
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = layar/Headers/BridgeHeader.h;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -520,6 +551,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -531,9 +566,14 @@
 				INFOPLIST_FILE = "layar/Resources/Other-Sources/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = layar/Headers/BridgeHeader.h;
 			};
 			name = Debug;
 		};
