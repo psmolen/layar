@@ -14,7 +14,7 @@ class ARLayarViewController: UIViewController, LayarSDKDelegate {
 
     required init(coder aDecoder: NSCoder) {
         //super.init(coder: aDecoder)
-        self.layarSDK = LayarSDK(consumerKey: "", andConsumerSecret: "", andDelegate: nil)
+        self.layarSDK = LayarSDK()
         super.init(coder: aDecoder)
     }
     
