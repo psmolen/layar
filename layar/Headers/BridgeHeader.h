@@ -10,4 +10,5 @@
 #define layar_BridgeHeader_h
 
 #import <LayarSDK/LayarSDK.h>
+#import "LayarConfig.h"
 #endif

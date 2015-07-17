@@ -13,7 +13,6 @@ class ARLayarViewController: UIViewController, LayarSDKDelegate {
     var layarSDK: LayarSDK
 
     required init(coder aDecoder: NSCoder) {
-        //super.init(coder: aDecoder)
         self.layarSDK = LayarSDK()
         super.init(coder: aDecoder)
     }
@@ -21,17 +20,28 @@ class ARLayarViewController: UIViewController, LayarSDKDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.layarSDK = LayarSDK(consumerKey: "", andConsumerSecret: "", andDelegate: self)
+        self.layarSDK = LayarSDK(consumerKey: layarKey, andConsumerSecret: layarSecret, andDelegate: self)
+
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
         let viewController: UIViewController!
         
-        self.layarSDK.viewControllerForScanningWithCompletion { (viewController: UIViewController!) -> Void in
+        self.layarSDK.viewControllerForURL(NSURL(string: "layar://"+layarName)) { (viewController: UIViewController!) -> Void in
+            
+            self.presentViewController(viewController, animated: true, completion: { () -> Void in
+                
+            })
             
         }
-        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
 
 }
