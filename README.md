@@ -9,6 +9,12 @@ This will:
  - Install the gem dependencies
  - Install the pod dependencies
 
+## Config ##
+
+- Rename layar/Headers/LayarConfigExample.h to LayarConfig.h
+- Input key & secret & layar name if using a geo layar
+
+
 ## Testing ##
 
 Run `bin/test`
